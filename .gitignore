@@ -4,3 +4,4 @@ dist-ssr
 *.local
 .DS_Store
 package-lock.json
+mock_trading_app
