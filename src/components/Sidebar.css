@@ -1,0 +1,115 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 17rem;
+  min-width: 17rem;
+  padding: 1.25rem 1rem;
+  border-right: 1px solid rgba(148, 163, 184, 0.14);
+  background: rgba(2, 6, 23, 0.72);
+  backdrop-filter: blur(10px);
+}
+
+.sidebar-brand {
+  padding: 0 0.5rem 1.25rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+  margin-bottom: 1rem;
+}
+
+.sidebar-eyebrow {
+  margin: 0 0 0.35rem;
+  color: #60a5fa;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sidebar-brand h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.sidebar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.sidebar-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  padding: 0.85rem 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 0.85rem;
+  background: rgba(15, 23, 42, 0.55);
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.sidebar-item:hover {
+  background: rgba(30, 41, 59, 0.85);
+  border-color: rgba(96, 165, 250, 0.35);
+  transform: translateX(2px);
+}
+
+.sidebar-item.active {
+  background: rgba(59, 130, 246, 0.14);
+  border-color: rgba(59, 130, 246, 0.45);
+}
+
+.sidebar-item-title {
+  font-weight: 700;
+}
+
+.sidebar-item-meta {
+  color: #94a3b8;
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.sidebar-item-state {
+  margin-top: 0.15rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sidebar-item-state.state-normal {
+  background: rgba(148, 163, 184, 0.12);
+  color: #cbd5e1;
+}
+
+.sidebar-item-state.state-maximized {
+  background: rgba(59, 130, 246, 0.15);
+  color: #93c5fd;
+}
+
+.sidebar-item-state.state-minimized {
+  background: rgba(234, 179, 8, 0.15);
+  color: #fde68a;
+}
+
+@media (max-width: 960px) {
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+  }
+
+  .sidebar-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}

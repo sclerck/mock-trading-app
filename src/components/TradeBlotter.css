@@ -1,0 +1,71 @@
+.blotter-table-wrap,
+.empty-state {
+  min-height: 220px;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 2rem 1rem;
+  border: 1px dashed rgba(148, 163, 184, 0.25);
+  border-radius: 0.85rem;
+  color: #94a3b8;
+  text-align: center;
+}
+
+.empty-state p {
+  margin: 0;
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.blotter-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.blotter-table th,
+.blotter-table td {
+  padding: 0.85rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.blotter-table th {
+  color: #94a3b8;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.blotter-row {
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.blotter-row:hover {
+  background: rgba(148, 163, 184, 0.08);
+}
+
+.side-badge {
+  display: inline-flex;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.side-badge.buy {
+  background: rgba(34, 197, 94, 0.15);
+  color: #86efac;
+}
+
+.side-badge.sell {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+}

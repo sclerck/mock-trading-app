@@ -1,0 +1,104 @@
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.workspace-shell {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100vh;
+}
+
+.app-header {
+  padding: 1.5rem 1.5rem 1rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  color: #60a5fa;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+}
+
+.app-subtitle {
+  margin: 0.75rem 0 0;
+  max-width: 42rem;
+  color: #94a3b8;
+}
+
+.workspace {
+  flex: 1;
+  min-height: 0;
+  padding: 0 1.5rem 1rem;
+}
+
+.workspace--normal {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'market order'
+    'market blotter';
+  gap: 1rem;
+  align-items: start;
+}
+
+.workspace--normal .panel-window[data-panel-id='market-data'] {
+  grid-area: market;
+}
+
+.workspace--normal .panel-window[data-panel-id='order-entry'] {
+  grid-area: order;
+}
+
+.workspace--normal .panel-window[data-panel-id='trade-blotter'] {
+  grid-area: blotter;
+}
+
+.workspace--maximized {
+  display: flex;
+  flex-direction: column;
+}
+
+.workspace--maximized .panel-window--normal {
+  display: none;
+}
+
+.workspace-empty {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 320px;
+  border: 1px dashed rgba(148, 163, 184, 0.25);
+  border-radius: 1rem;
+  color: #94a3b8;
+  text-align: center;
+}
+
+.workspace-empty p {
+  margin: 0;
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+@media (max-width: 960px) {
+  .app-shell {
+    flex-direction: column;
+  }
+
+  .workspace--normal {
+    grid-template-columns: 1fr;
+  }
+}
